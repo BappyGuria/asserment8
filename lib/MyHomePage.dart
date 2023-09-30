@@ -56,34 +56,37 @@ portraitMode (context){
 landscapeMode(context){
   return SingleChildScrollView(
     scrollDirection:Axis.vertical,
-    child: Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Expanded(
-          flex: 4,
-            child: profileCircleAvatar(),
-        ),
-        Expanded(
-          flex: 6,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text('John Doe',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
-                SizedBox(height: 10,),
-                Wrap(
-                  children: [
-                    Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',style: TextStyle(
-                        fontSize: 20
-                    ),)
+    child: Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 10),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 4,
+              child: profileCircleAvatar(),
+          ),
+          Expanded(
+            flex: 6,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text('John Doe',style: TextStyle(fontSize: 30,fontWeight: FontWeight.bold),),
+                  SizedBox(height: 10,),
+                  Wrap(
+                    children: [
+                      Text('Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry',style: TextStyle(
+                          fontSize: 20
+                      ),)
 
-                  ],
-                ),
-                profileOrientationBuilder(context)
-              ],
-            )
-        )
-      ],
+                    ],
+                  ),
+                  SizedBox(height:10),
+                  profileOrientationBuilder(context)
+                ],
+              )
+          )
+        ],
+      ),
     ),
   );
 
