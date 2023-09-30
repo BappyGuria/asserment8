@@ -24,6 +24,7 @@ class MyHomePage extends StatelessWidget {
   }
 }
 
+// Home Screen Portrait Mode
 
 portraitMode (context){
   return SingleChildScrollView(
@@ -53,6 +54,7 @@ portraitMode (context){
   );
 }
 
+// Home Screen Landscape Mode
 landscapeMode(context){
   return SingleChildScrollView(
     scrollDirection:Axis.vertical,
@@ -93,6 +95,7 @@ landscapeMode(context){
 }
 
 
+//  CircleAvatar
 
 CircleAvatar profileCircleAvatar(){
   return CircleAvatar(
@@ -100,6 +103,9 @@ CircleAvatar profileCircleAvatar(){
     backgroundImage: NetworkImage("https://img.freepik.com/premium-photo/circle-blue-abstract-futuristic-technology-background-technology-design-template-generative-ai_1423-9184.jpg?w=2000"),
   );
 }
+
+
+// profileOrientationBuilder
 
 GridView profileOrientationBuilder(context){
   return GridView.builder(
